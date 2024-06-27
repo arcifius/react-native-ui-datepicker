@@ -5,9 +5,6 @@ import dayjs from 'dayjs';
 import type { HeaderProps } from '../types';
 import { getDateYear, getYearRange, YEAR_PAGE_SIZE } from '../utils';
 
-const arrow_left = require('../assets/images/arrow_left.png');
-const arrow_right = require('../assets/images/arrow_right.png');
-
 const Header = ({ buttonPrevIcon, buttonNextIcon }: HeaderProps) => {
   const {
     mode,
@@ -45,7 +42,7 @@ const Header = ({ buttonPrevIcon, buttonNextIcon }: HeaderProps) => {
       >
         {buttonPrevIcon || (
           <Image
-            source={arrow_left}
+            source={require('../assets/images/arrow_left.png')}
             style={{
               width: theme?.headerButtonSize || 18,
               height: theme?.headerButtonSize || 18,
@@ -77,7 +74,7 @@ const Header = ({ buttonPrevIcon, buttonNextIcon }: HeaderProps) => {
       >
         {buttonNextIcon || (
           <Image
-            source={arrow_right}
+            source={require('../assets/images/arrow_right.png')}
             style={{
               width: theme?.headerButtonSize || 18,
               height: theme?.headerButtonSize || 18,
